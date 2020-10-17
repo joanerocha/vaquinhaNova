@@ -1,57 +1,44 @@
 <template>
-  <div style="padding: 16px">
-    <div class="q-title text-center">{{ title }}</div>
-    <div class="q-pa-md row items-start q-gutter-md">
-    <q-card class="my-card">
-      <q-card-section class="bg-primary text-white">
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-separator />
-
-      <q-card-actions align="right">
-        <q-btn flat>Action 1</q-btn>
-        <q-btn flat>Action 2</q-btn>
-      </q-card-actions>
+  <div style="padding: 12px">
+    <q-card color="green-5">
+      <q-card-main>
+        <q-card-title>
+          Acompanhe as previsões de parto e secagem do seu rebanho
+        </q-card-title>
+      </q-card-main>
+      <q-card-separator dark inset />
     </q-card>
-
-    <q-card class="my-card">
-      <q-card-section class="bg-purple text-white">
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-card-actions align="around">
-        <q-btn flat>Action 1</q-btn>
-        <q-btn flat>Action 2</q-btn>
-      </q-card-actions>
-    </q-card>
-
-    <q-card class="my-card">
-      <q-card-section class="bg-teal text-white">
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-card-actions vertical align="right">
-        <q-btn flat>Action 1</q-btn>
-        <q-btn flat>Action 2</q-btn>
-      </q-card-actions>
-    </q-card>
-
-    <q-card class="my-card">
-      <q-card-section class="bg-grey-8 text-white">
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-card-actions vertical align="center">
-        <q-btn flat>Action 1</q-btn>
-        <q-btn flat>Action 2</q-btn>
-      </q-card-actions>
-    </q-card>
-  </div>
+    <q-card-actions @click.native="$router.push('/add-animal')">
+      <q-card inline style="width: 100%; max-width: 100%">
+        <q-card-title>
+          <div class="text-h6 text-center">Cadastrar Vaca</div>
+        </q-card-title>
+        <q-card-separator />
+        <q-card-main>
+          <img
+            src="https://www.comprerural.com/wp-content/uploads/2017/06/vacas-jersey-1021x545.jpg"
+            width="100%"
+          />
+        </q-card-main>
+        <q-card-separator />
+      </q-card>
+    </q-card-actions>
+    <q-card-actions @click.native="$router.push('/insert-data')">
+      <q-card inline style="width: 100%; max-width: 100%">
+        <q-card-title>
+          <div class="text-h6 text-center">Buscar Vaca</div>
+        </q-card-title>
+        <q-card-separator />
+        <q-card-main>
+          <img
+            class="center"
+            src="https://dicas.boisaude.com.br/wp-content/uploads/2019/02/Ivermectitna-para-vacas-prenhas.jpeg"
+            width="100%"
+          />
+        </q-card-main>
+        <q-card-separator />
+      </q-card>
+    </q-card-actions>
   </div>
 </template>
 <script>
